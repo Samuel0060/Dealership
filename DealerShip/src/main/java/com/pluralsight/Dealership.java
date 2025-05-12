@@ -16,40 +16,76 @@ public class Dealership {
         this.phone = phone;
     }
 
-    public static ArrayList<Vehicle> getVehiclesByPrice(ArrayList<Vehicle> inventory, double min, double max) {
+    public ArrayList<Vehicle> getVehiclesByPrice(ArrayList<Vehicle> inventory, double min, double max) {
         return null;
     }
 
-    public static ArrayList<Vehicle> getVehiclesByMakeModel(ArrayList<Vehicle> inventory, String make, String model) {
+    public ArrayList<Vehicle> getVehiclesByMakeModel(ArrayList<Vehicle> inventory, String make, String model) {
         return null;
     }
 
-    public static ArrayList<Vehicle> getVehiclesByYear(ArrayList<Vehicle> inventory, String min, int max) {
+    public ArrayList<Vehicle> getVehiclesByYear(ArrayList<Vehicle> inventory, String min, int max) {
         return null;
     }
 
-    public static ArrayList<Vehicle> getVehiclesByColor(ArrayList<Vehicle> inventory, String color) {
+    public ArrayList<Vehicle> getVehiclesByColor(ArrayList<Vehicle> inventory, String color) {
         return null;
     }
 
-    public static ArrayList<Vehicle> getVehiclesByMileage(ArrayList<Vehicle> inventory, int min, int max) {
+    public ArrayList<Vehicle> getVehiclesByMileage(ArrayList<Vehicle> inventory, int min, int max) {
         return null;
     }
 
-    public static ArrayList<Vehicle> getVehiclesByType(ArrayList<Vehicle> inventory, String vehicleType) {
+    public ArrayList<Vehicle> getVehiclesByType(ArrayList<Vehicle> inventory, String vehicleType) {
         return null;
     }
 
-    public static ArrayList<Vehicle> getAllVehicles(ArrayList<Vehicle> inventory) {
+    public ArrayList<Vehicle> getAllVehicles(ArrayList<Vehicle> inventory) {
         return inventory;
     }
 
-    public static ArrayList<Vehicle> addVehicle(ArrayList<Vehicle> inventory) {
-//        Scanner scanner = new Scanner(System.in);
-//        inventory.add(new Vehicle(scanner));
+    public ArrayList<Vehicle> addVehicle(ArrayList<Vehicle> inventory) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("VIN#:");
+            int vin = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Year:");
+            int year = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Make:");
+            String make = scanner.nextLine();
+
+            System.out.println("Model:");
+            String model = scanner.nextLine();
+
+            System.out.println("Vehicle Type (e.g., sedan, SUV, truck):");
+            String vehicleType = scanner.nextLine();
+
+            System.out.println("Color:");
+            String color = scanner.nextLine();
+
+            System.out.println("Odometer reading");
+            int odometer = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Price: ");
+            double price = scanner.nextDouble();
+            scanner.nextLine();
+
+            //create new vehicle
+            Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
+
+            //add the vehicle to array
+            inventory.add(vehicle);
+
+            System.out.println("Vehicle added successfully");
+
+            return inventory;
     }
 
-    public static ArrayList<Vehicle> removeVehicle(ArrayList<Vehicle> inventory) {
-
+    public ArrayList<Vehicle> removeVehicle(ArrayList<Vehicle> inventory) {
+        return null;
     }
 }
